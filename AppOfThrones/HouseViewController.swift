@@ -10,5 +10,10 @@ import UIKit
 
 class HouseViewController: UIViewController{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "House"
+    }
+    
 }
 

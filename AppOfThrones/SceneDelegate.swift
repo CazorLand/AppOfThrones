@@ -25,8 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         episodeViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
         castViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
         
-        settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
-        houseViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "gear"), tag: 3)
+        settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 2)
+        houseViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 3)
         
         let navigationEpisodeViewController = UINavigationController.init(rootViewController: episodeViewController)
         let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
