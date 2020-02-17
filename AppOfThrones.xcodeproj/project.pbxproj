@@ -16,6 +16,10 @@
 		D020BBE523F602BA0063843B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020BBE423F602BA0063843B /* SettingsViewController.xib */; };
 		D020BBE723F607690063843B /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D020BBE623F607690063843B /* HouseViewController.swift */; };
 		D020BBE923F6077A0063843B /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020BBE823F6077A0063843B /* HouseViewController.xib */; };
+		D020BBEF23FA8DA20063843B /* OpenHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D020BBEE23FA8DA10063843B /* OpenHelp.swift */; };
+		D020BBF123FA8E010063843B /* OpenHelp.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020BBF023FA8E010063843B /* OpenHelp.xib */; };
+		D020BBF323FA96060063843B /* openProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D020BBF223FA96060063843B /* openProfile.swift */; };
+		D020BBF523FA961F0063843B /* OpenProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020BBF423FA961F0063843B /* OpenProfile.xib */; };
 		D049A1DF23F34BC700D3BA81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049A1DE23F34BC700D3BA81 /* AppDelegate.swift */; };
 		D049A1E123F34BC700D3BA81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049A1E023F34BC700D3BA81 /* SceneDelegate.swift */; };
 		D049A1E823F34BD000D3BA81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D049A1E723F34BD000D3BA81 /* Assets.xcassets */; };
@@ -45,6 +49,10 @@
 		D020BBE423F602BA0063843B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		D020BBE623F607690063843B /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		D020BBE823F6077A0063843B /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		D020BBEE23FA8DA10063843B /* OpenHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHelp.swift; sourceTree = "<group>"; };
+		D020BBF023FA8E010063843B /* OpenHelp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenHelp.xib; sourceTree = "<group>"; };
+		D020BBF223FA96060063843B /* openProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openProfile.swift; sourceTree = "<group>"; };
+		D020BBF423FA961F0063843B /* OpenProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenProfile.xib; sourceTree = "<group>"; };
 		D049A1DB23F34BC700D3BA81 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D049A1DE23F34BC700D3BA81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D049A1E023F34BC700D3BA81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +106,10 @@
 			children = (
 				D020BBE223F602AA0063843B /* SettingsViewController.swift */,
 				D020BBE423F602BA0063843B /* SettingsViewController.xib */,
+				D020BBF223FA96060063843B /* openProfile.swift */,
+				D020BBF423FA961F0063843B /* OpenProfile.xib */,
+				D020BBEE23FA8DA10063843B /* OpenHelp.swift */,
+				D020BBF023FA8E010063843B /* OpenHelp.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -239,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D020BBF123FA8E010063843B /* OpenHelp.xib in Resources */,
 				D05F026723F35E9000D41629 /* RateViewController.xib in Resources */,
 				D020BBE523F602BA0063843B /* SettingsViewController.xib in Resources */,
 				D049A1EB23F34BD000D3BA81 /* LaunchScreen.storyboard in Resources */,
@@ -246,6 +259,7 @@
 				D020BBE923F6077A0063843B /* HouseViewController.xib in Resources */,
 				D020BBD823F5F0440063843B /* EpisodeViewController.xib in Resources */,
 				D049A1E823F34BD000D3BA81 /* Assets.xcassets in Resources */,
+				D020BBF523FA961F0063843B /* OpenProfile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,11 +280,13 @@
 				D05F026523F35E4500D41629 /* RateViewController.swift in Sources */,
 				D049A1DF23F34BC700D3BA81 /* AppDelegate.swift in Sources */,
 				D020BBE323F602AA0063843B /* SettingsViewController.swift in Sources */,
+				D020BBF323FA96060063843B /* openProfile.swift in Sources */,
 				D020BBD623F5F0320063843B /* EpisodeViewController.swift in Sources */,
 				D020BBDB23F5F4180063843B /* Episode.swift in Sources */,
 				D049A1E123F34BC700D3BA81 /* SceneDelegate.swift in Sources */,
 				D020BBDF23F6022F0063843B /* CastViewController.swift in Sources */,
 				D020BBE723F607690063843B /* HouseViewController.swift in Sources */,
+				D020BBEF23FA8DA20063843B /* OpenHelp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

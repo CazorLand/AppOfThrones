@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let houseViewController = HouseViewController()
         let settingsViewController = SettingsViewController()
         
+        
         episodeViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
         castViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
         
@@ -32,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
         let navigationHouseController = UINavigationController.init(rootViewController: houseViewController)
         let navigationSettingsController = UINavigationController.init(rootViewController: settingsViewController)
+        
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseController, navigationSettingsController]

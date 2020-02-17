@@ -15,4 +15,22 @@ class SettingsViewController: UIViewController {
         self.title = "Settings"
     }
     
+    
+    @IBAction func openProfile(_ sender: Any) {
+        
+        let openProfile = OpenProfile()
+        
+        self.present(openProfile, animated: true, completion: nil)
+    }
+    
+    @IBAction func openHelp(_ sender: Any) {
+        
+        let openHelp = OpenHelp()
+        
+        self.present(openHelp, animated: true, completion: nil)
+        
+    }
+    
+    
+    
 }

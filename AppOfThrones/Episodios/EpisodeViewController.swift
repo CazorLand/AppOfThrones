@@ -23,6 +23,7 @@ class EpisodeViewController: UIViewController {
         
         let rateViewController = RateViewController()
         
+        
         self.present(rateViewController, animated: true, completion: nil)
         
     }
