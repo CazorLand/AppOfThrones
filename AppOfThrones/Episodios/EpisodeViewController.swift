@@ -18,10 +18,9 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        
-        
-        
     }
+    
+    // MARK: - Setup
     
     func setupUI() {
         self.title = "Seasons"
@@ -39,7 +38,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let rateViewController = RateViewController()
         rateViewController.modalPresentationStyle = .fullScreen
         self.present(rateViewController, animated: true, completion: nil)
-        
     }
     
     //MARK: - UITableViewDelegate

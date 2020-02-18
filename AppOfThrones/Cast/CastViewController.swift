@@ -29,6 +29,7 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.title = "Cast"
         
         
     }

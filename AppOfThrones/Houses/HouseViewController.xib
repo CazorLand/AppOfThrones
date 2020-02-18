@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="W8d-p4-RKV" id="8Wi-uY-Tct"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KiF-wU-i94"/>
             </connections>
         </placeholder>
@@ -16,9 +17,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-p4-RKV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="W8d-p4-RKV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Kyf-Ti-geI"/>
+                <constraint firstItem="W8d-p4-RKV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QmM-Vi-Qsf"/>
+                <constraint firstItem="W8d-p4-RKV" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="YbO-z2-09Q"/>
+                <constraint firstItem="W8d-p4-RKV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="q1u-tI-841"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </view>
     </objects>
 </document>
