@@ -20,14 +20,19 @@ class SettingsViewController: UIViewController {
         
         let openProfile = OpenProfile()
         
-        self.present(openProfile, animated: true, completion: nil)
+        //self.present(openProfile, animated: true, completion: nil)
+        //se abre nueva pantalla
+        self.show(openProfile, sender: self)
     }
     
     @IBAction func openHelp(_ sender: Any) {
         
         let openHelp = OpenHelp()
         
+        //Sale ficha desde abajo
         self.present(openHelp, animated: true, completion: nil)
+        
+        
         
     }
     

@@ -50,7 +50,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     //2.- Acción de la tabla o boton.
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Se ha hecho tap en la celda con sección \(indexPath.section) y fila \(indexPath.row)")
         tableView.deselectRow(at: indexPath, animated: true)
     }
