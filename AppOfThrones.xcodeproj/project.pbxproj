@@ -34,6 +34,7 @@
 		D049A1F623F34BD100D3BA81 /* AppOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049A1F523F34BD100D3BA81 /* AppOfThronesTests.swift */; };
 		D05F026523F35E4500D41629 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F026423F35E4500D41629 /* RateViewController.swift */; };
 		D05F026723F35E9000D41629 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F026623F35E9000D41629 /* RateViewController.xib */; };
+		D0B19BBB23FC825B00C59FA2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B19BBA23FC825B00C59FA2 /* Rating.swift */; };
 		D0CA504E23FC1368005EA535 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA504D23FC1368005EA535 /* HouseTableViewCell.swift */; };
 		D0CA505023FC137C005EA535 /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CA504F23FC137C005EA535 /* HouseTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		D049A1F723F34BD100D3BA81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05F026423F35E4500D41629 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		D05F026623F35E9000D41629 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		D0B19BBA23FC825B00C59FA2 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		D0CA504D23FC1368005EA535 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
 		D0CA504F23FC137C005EA535 /* HouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				D020BBDA23F5F4180063843B /* Episode.swift */,
 				D03A44F323FB4B5F00E820E3 /* Cast.swift */,
 				D03A44F923FB54E800E820E3 /* House.swift */,
+				D0B19BBA23FC825B00C59FA2 /* Rating.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,10 +200,10 @@
 			children = (
 				D05F026423F35E4500D41629 /* RateViewController.swift */,
 				D05F026623F35E9000D41629 /* RateViewController.xib */,
-				D03A44EB23FB31A400E820E3 /* EpisodeTableViewCell.swift */,
-				D03A44ED23FB31DF00E820E3 /* EpisodeTableViewCell.xib */,
 				D020BBD523F5F0320063843B /* EpisodeViewController.swift */,
 				D020BBD723F5F0440063843B /* EpisodeViewController.xib */,
+				D03A44EB23FB31A400E820E3 /* EpisodeTableViewCell.swift */,
+				D03A44ED23FB31DF00E820E3 /* EpisodeTableViewCell.xib */,
 			);
 			path = Episodios;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				D05F026523F35E4500D41629 /* RateViewController.swift in Sources */,
 				D049A1DF23F34BC700D3BA81 /* AppDelegate.swift in Sources */,
+				D0B19BBB23FC825B00C59FA2 /* Rating.swift in Sources */,
 				D020BBE323F602AA0063843B /* SettingsViewController.swift in Sources */,
 				D020BBF323FA96060063843B /* openProfile.swift in Sources */,
 				D03A44F423FB4B5F00E820E3 /* Cast.swift in Sources */,

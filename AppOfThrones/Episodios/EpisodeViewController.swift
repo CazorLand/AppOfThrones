@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +18,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        
     }
     
     // MARK: - Setup
@@ -40,6 +41,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.present(rateViewController, animated: true, completion: nil)
     }
     
+    //MARK: - EpisodeTableViewCellDelegate
+    
+    func didRateChange() {
+        self.tableView.reloadData()
+    }
+    
     //MARK: - UITableViewDelegate
     
     //1.- Altura de la celda
@@ -48,9 +55,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     //2.- Acción de la tabla o boton.
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Se ha hecho tap en la celda con sección \(indexPath.section) y fila \(indexPath.row)")
-        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     // MARK: - UITableViewDataSource
@@ -67,8 +77,16 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
             let ep = episodes[indexPath.row]
             cell.setEpisode(ep)
+            cell.rateBlock = { () -> Void in
+                let rateViewController = RateViewController.init(withEpisode: ep)
+                rateViewController.delegate = self
+                let navigationController = UINavigationController.init(rootViewController: rateViewController)
+                self.present(navigationController, animated: true, completion: nil)
+                
+            }
             return cell
         }
         fatalError("Could not create the Episde cell")
     }
+
 }

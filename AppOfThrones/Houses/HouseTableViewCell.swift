@@ -19,7 +19,7 @@ class HouseTableViewCell: UITableViewCell {
     @IBOutlet weak var seat: UILabel!
     
     override func awakeFromNib() {
-        imageName.layer.cornerRadius = 2.0
+        imageName.layer.cornerRadius = 8.0
         imageName.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
         imageName.layer.borderWidth = 1.0
         
