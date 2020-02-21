@@ -10,12 +10,10 @@ import UIKit
 
 class EpisodeTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var heart: UIButton!
     @IBOutlet weak var thumb: UIImageView!
-    
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var date: UILabel!
-    
     @IBOutlet weak var rateButton: UIButton!
     
     @IBOutlet weak var star01: UIImageView!
@@ -25,6 +23,8 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var star05: UIImageView!
     
     var rateBlock: (()-> Void)?
+    private var episode: Episode?
+    var delegate: FavoriteDelegate?
     
     override func awakeFromNib() {
         thumb.layer.cornerRadius = 2.0
@@ -34,6 +34,11 @@ class EpisodeTableViewCell: UITableViewCell {
     }
     
     func setEpisode(_ episode: Episode) {
+        self.episode = episode
+        let heartImageNamed = DataController.shared.isFavorite(episode) ? "heart.fill" : "heart"
+        let heartImage = UIImage.init(systemName: heartImageNamed)
+        self.heart.setImage(heartImage, for: .normal)
+        
         thumb.image = UIImage.init(named: episode.image ?? "")
         title.text = episode.name
         date.text = episode.date
@@ -47,6 +52,16 @@ class EpisodeTableViewCell: UITableViewCell {
             }
         }else{
             self.modeRate()
+        }
+    }
+    @IBAction func fireFavorite(_ sender: Any) {
+        if let episode = self.episode {
+            if DataController.shared.isFavorite(episode) == false {
+                DataController.shared.addFavorite(episode)
+            }else {
+                DataController.shared.removeFavorite(episode)
+            }
+            delegate?.didFavoriteChanged()
         }
     }
     

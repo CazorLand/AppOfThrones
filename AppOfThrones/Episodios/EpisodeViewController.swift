@@ -8,17 +8,25 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate, FavoriteDelegate {
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter is coming", date: "April 17, 2011", image: "image", episode: 1, season: 1, overview: "Jon Arryn, the Hand of the King, is dead. King Robert...")]
+    var episodes: [Episode] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupNotifications()
+        self.setupData()
         
+    }
+    
+    deinit {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.removeObserver(self, name: noteName, object: nil)
     }
     
     // MARK: - Setup
@@ -34,6 +42,21 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+    }
+    
+    func setupData() {
+        let pathURL = Bundle.main.url(forResource: "season_1", withExtension: "json")!
+        let data = try! Data.init(contentsOf: pathURL)
+        let decoder = JSONDecoder()
+        episodes = try! decoder.decode([Episode].self, from: data)
+        self.tableView.reloadData()
+    }
+    
+    // MARK: - IBActions
+    
     @IBAction func openRate(_ sender: Any) {
         
         let rateViewController = RateViewController()
@@ -41,7 +64,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.present(rateViewController, animated: true, completion: nil)
     }
     
+    
     //MARK: - EpisodeTableViewCellDelegate
+    
+    @objc func didFavoriteChanged() {
+        self.tableView.reloadData()
+    }
     
     func didRateChange() {
         self.tableView.reloadData()
@@ -77,6 +105,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
             let ep = episodes[indexPath.row]
             cell.setEpisode(ep)
+            cell.delegate = self
             cell.rateBlock = { () -> Void in
                 let rateViewController = RateViewController.init(withEpisode: ep)
                 rateViewController.delegate = self

@@ -8,22 +8,17 @@
 
 import UIKit
 
-class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FavoriteDelegate{
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-    let house: [House] = [House.init(imageName: "Arryn", name: "Arryn", words: "As High as Honor", seat: "The Eyrie"),
-                          House.init(imageName: "Baratheon", name: "Baratheon", words: "Ours is the Fury.", seat: "Storm's End"),
-                          House.init(imageName: "Greyjoy", name: "Greyjoy", words: "What Is Dead May Never Die", seat: "Salt Throne, Pyke"), House.init(imageName: "Lannister", name: "Lannister", words: "A Lannister Always Pays His Debts", seat: "Casterly Rock"),
-                          House.init(imageName: "Martell", name: "Martell", words: "Unbowed, Unbent, Unbroken", seat: "Sunspear"),
-                          House.init(imageName: "Stark", name: "Stark", words: "Winter Is Coming", seat: "Winterfell"),
-                          House.init(imageName: "Targaryen", name: "Targaryen", words: "Fire and Blood", seat: "Red Keep, King's Landing, Dragonstone, Great Pyramid, Meereen, The Aegonfort"),
-                          House.init(imageName: "Tully", name: "Tully", words: "Family, Duty, Honor", seat: "Riverrun"),
-                          House.init(imageName: "Tyrell", name: "Tyrell", words: "Growing Strong", seat: "Highgarden")]
+    var house: [House] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupData()
         
     }
     
@@ -38,6 +33,20 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+    
+    func setupData() {
+        let pathURL = Bundle.main.url(forResource: "houses", withExtension: "json")!
+        let data = try! Data.init(contentsOf: pathURL)
+        let decoder = JSONDecoder()
+        house = try! decoder.decode([House].self, from: data)
+        tableView.reloadData()
+    }
+    
+    // MARK: -FavoriteDelegate
+    
+    func didFavoriteChanged() {
+          self.tableView.reloadData()
+      }
     
     //MARK: - UITableViewDelegate
     
@@ -66,6 +75,7 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseTableViewCell", for: indexPath) as? HouseTableViewCell {
             let houses = house[indexPath.row]
             cell.setHouse(houses)
+            cell.delegate = self
             return cell
         }
         fatalError("Could not create the Episde cell")

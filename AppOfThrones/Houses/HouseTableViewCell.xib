@@ -49,13 +49,27 @@
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JL-gp-dB7">
+                        <rect key="frame" x="360" y="0.0" width="54" height="123"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="UJg-OH-I3g"/>
+                        </constraints>
+                        <color key="tintColor" red="0.8487737179" green="0.55221116540000004" blue="0.30974155660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="fireFavorite:" destination="ZWL-56-7zh" eventType="touchUpInside" id="2Fb-IQ-4jI"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="O6h-k6-b1S" firstAttribute="leading" secondItem="nRu-aN-P8V" secondAttribute="trailing" constant="8" id="B73-Ut-TYU"/>
                     <constraint firstItem="O6h-k6-b1S" firstAttribute="trailing" secondItem="MFD-pW-KZD" secondAttribute="trailingMargin" id="Drw-9d-Dvy"/>
                     <constraint firstAttribute="trailing" secondItem="yJM-CM-ASc" secondAttribute="trailing" constant="20" id="Lbp-Bj-h5n"/>
                     <constraint firstItem="yJM-CM-ASc" firstAttribute="top" secondItem="igf-zC-PLC" secondAttribute="bottom" constant="8" id="NHT-EV-huL"/>
+                    <constraint firstAttribute="bottom" secondItem="1JL-gp-dB7" secondAttribute="bottom" id="YlY-bT-pAC"/>
                     <constraint firstItem="nRu-aN-P8V" firstAttribute="centerY" secondItem="MFD-pW-KZD" secondAttribute="centerY" id="ZKe-Cj-Fir"/>
+                    <constraint firstItem="1JL-gp-dB7" firstAttribute="top" secondItem="MFD-pW-KZD" secondAttribute="top" id="ZnW-rb-qj2"/>
+                    <constraint firstAttribute="trailing" secondItem="1JL-gp-dB7" secondAttribute="trailing" id="bxm-wJ-o4c"/>
                     <constraint firstAttribute="trailing" secondItem="igf-zC-PLC" secondAttribute="trailing" constant="20" id="dv9-zH-irR"/>
                     <constraint firstItem="igf-zC-PLC" firstAttribute="leading" secondItem="nRu-aN-P8V" secondAttribute="trailing" constant="8" id="glV-6z-Y8p"/>
                     <constraint firstItem="O6h-k6-b1S" firstAttribute="top" secondItem="yJM-CM-ASc" secondAttribute="bottom" constant="12" id="hlb-3H-FEx"/>
@@ -66,6 +80,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <connections>
+                <outlet property="heart" destination="1JL-gp-dB7" id="wqy-HU-ag4"/>
                 <outlet property="imageName" destination="nRu-aN-P8V" id="26U-gy-s8N"/>
                 <outlet property="name" destination="igf-zC-PLC" id="Vex-Qy-fXg"/>
                 <outlet property="seat" destination="O6h-k6-b1S" id="9aQ-7v-YxN"/>
@@ -74,4 +89,7 @@
             <point key="canvasLocation" x="133.33333333333334" y="85.379464285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+    </resources>
 </document>

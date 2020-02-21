@@ -56,6 +56,9 @@
                         </constraints>
                         <color key="tintColor" red="0.8487737179" green="0.55221116540000004" blue="0.30974155660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="favoriteAction:" destination="mjQ-6Y-5hV" eventType="touchUpInside" id="Sb2-Dz-1Ts"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

@@ -10,6 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBAction func cleanFavoritesAction(_ sender: Any) {
+        DataController.shared.cleanFavorite()
+        
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.post(name: noteName, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
