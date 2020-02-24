@@ -100,6 +100,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
     }
     
     // MARK: - UITableViewDataSource

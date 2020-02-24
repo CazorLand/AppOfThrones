@@ -16,20 +16,23 @@ class CastDetailTableVC: UITableViewCell {
     @IBOutlet weak var birth: UILabel!
     @IBOutlet weak var placeBirth: UILabel!
     
+    var cast: Cast?
     
-    var cast: Cast? {
-        didSet {
-            avatar.image = UIImage.init(named: self.cast?.avatar ?? "")
-            fullName.text = self.cast?.fullname
-            role.text = self.cast?.role
-            birth.text = self.cast?.birth
-            placeBirth.text = self.cast?.placeBirth
-        }
+    override func awakeFromNib() {
+        avatar.layer.cornerRadius = 5
     }
-    
-   
 
-    
+    func setCast(_ cast: Cast) {
+        self.cast = cast
+        self.avatar.image = cast.avatar == nil ? nil : UIImage.init(named: cast.avatar!)
+        self.fullName.text = cast.fullname
+        self.role.text = cast.role
+        
+        self.birth.text = cast.birth
+        self.placeBirth.text = cast.placeBirth
+        
+        
+    }
     
     
 }
