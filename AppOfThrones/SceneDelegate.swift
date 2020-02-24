@@ -17,26 +17,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let episodeViewController = EpisodeViewController()
-        let castViewController = CastViewController()
-        let houseViewController = HouseViewController()
-        let settingsViewController = SettingsViewController()
+        let episodeViewController = EpisodeViewController.init(nibName: "EpisodeViewController", bundle: nil)
+        let castViewController = CastViewController.init(nibName: "CastViewController", bundle: nil)
+        let houseViewController = HouseViewController.init(nibName: "HouseViewController", bundle: nil)
+        let settingsViewController = SettingsViewController.init(nibName: "SettingsViewController", bundle: nil)
+        let favoritesViewController = FavoritesViewController.init(nibName: "FavoritesViewController", bundle: nil)
         
         
         episodeViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
         castViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
         
         settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 2)
-        houseViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 3)
+        favoritesViewController.tabBarItem = UITabBarItem.init(title: "Favorites", image: UIImage.init(systemName: "heart"), tag: 3)
+        houseViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 4)
         
         let navigationEpisodeViewController = UINavigationController.init(rootViewController: episodeViewController)
         let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
         let navigationHouseController = UINavigationController.init(rootViewController: houseViewController)
         let navigationSettingsController = UINavigationController.init(rootViewController: settingsViewController)
+        let navigationFavoritesViewController = UINavigationController.init(rootViewController: favoritesViewController)
         
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseController, navigationSettingsController]
+        tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseController, navigationFavoritesViewController, navigationSettingsController]
         
         tabBarController.tabBar.barStyle = .black
         tabBarController.tabBar.isTranslucent = true

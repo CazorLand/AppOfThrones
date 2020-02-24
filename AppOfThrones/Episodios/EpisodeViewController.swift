@@ -20,7 +20,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         self.setupUI()
         self.setupNotifications()
-        self.setupData()
+        self.setupData(1)
         
     }
     
@@ -47,12 +47,19 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
     }
     
-    func setupData() {
-        let pathURL = Bundle.main.url(forResource: "season_1", withExtension: "json")!
-        let data = try! Data.init(contentsOf: pathURL)
-        let decoder = JSONDecoder()
-        episodes = try! decoder.decode([Episode].self, from: data)
-        self.tableView.reloadData()
+    func setupData(_ seasonNumber :Int) {
+        if let pathURL = Bundle.main.url(forResource: "season_\(seasonNumber)", withExtension: "json") {
+            do {
+                let data = try Data.init(contentsOf: pathURL)
+                let decoder = JSONDecoder()
+                episodes = try decoder.decode([Episode].self, from: data)
+                self.tableView.reloadData()
+            }catch {
+                fatalError(error.localizedDescription)
+            }
+        }else {
+            fatalError("Could not build the pathURL")
+        }
     }
     
     // MARK: - IBActions
@@ -62,6 +69,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let rateViewController = RateViewController()
         rateViewController.modalPresentationStyle = .fullScreen
         self.present(rateViewController, animated: true, completion: nil)
+    }
+    @IBAction func seasonChanged(_ sender: UISegmentedControl) {
+        let seasonNumber = sender.selectedSegmentIndex + 1
+        self.setupData(seasonNumber)
     }
     
     

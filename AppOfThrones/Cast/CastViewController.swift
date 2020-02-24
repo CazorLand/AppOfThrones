@@ -21,9 +21,8 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.title = "Cast"
         self.setupNotifications()
         self.setupData()
-        
-        
     }
+
     
     // MARK: - Setup
     
@@ -31,6 +30,9 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
+        
+        let nibDetail = UINib.init(nibName: "CastDetailTableVC", bundle: nil)
+        tableView.register(nibDetail, forCellReuseIdentifier: "CastDetailTableVC")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,11 +45,18 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setupData() {
-        let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json")!
-        let data = try! Data.init(contentsOf: pathURL)
-        let decoder = JSONDecoder()
-        cast = try! decoder.decode([Cast].self, from: data)
-        self.tableView.reloadData()
+        if let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json") {
+            do {
+            let data = try Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder()
+            cast = try decoder.decode([Cast].self, from: data)
+            self.tableView.reloadData()
+            } catch {
+                fatalError("Could not read th JSON")
+            }
+        } else {
+            fatalError("Could not build the pathURL")
+        }
     }
     
     
@@ -66,8 +75,6 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //2.- Acción de la tabla o boton.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Se ha hecho tap en la celda con sección \(indexPath.section) y fila \(indexPath.row)")
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: - UITableViewDataSource

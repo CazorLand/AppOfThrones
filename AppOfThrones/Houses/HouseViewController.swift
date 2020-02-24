@@ -19,6 +19,7 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         self.setupUI()
         self.setupData()
+        self.setupNotifications()
         
     }
     
@@ -34,17 +35,29 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.dataSource = self
     }
     
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+    }
+    
     func setupData() {
-        let pathURL = Bundle.main.url(forResource: "houses", withExtension: "json")!
-        let data = try! Data.init(contentsOf: pathURL)
-        let decoder = JSONDecoder()
-        house = try! decoder.decode([House].self, from: data)
-        tableView.reloadData()
+        if let pathURL = Bundle.main.url(forResource: "houses", withExtension: "json") {
+            do {
+                let data = try Data.init(contentsOf: pathURL)
+                let decoder = JSONDecoder()
+                house = try decoder.decode([House].self, from: data)
+                tableView.reloadData()
+            } catch {
+                fatalError("Could not read the JSON")
+            }
+        }else {
+            fatalError("Could not build the pathURL")
+        }
     }
     
     // MARK: -FavoriteDelegate
     
-    func didFavoriteChanged() {
+    @objc func didFavoriteChanged() {
           self.tableView.reloadData()
       }
     

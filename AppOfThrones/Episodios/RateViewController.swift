@@ -35,12 +35,18 @@ class RateViewController: UIViewController {
         self.init()
         self.episode = episode
         self.title = episode.name
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.layer.cornerRadius = 4.0
+
     }
+    
+    // MARK: - Setup
+    
+    
     
     // MARK: - IBActions
     
