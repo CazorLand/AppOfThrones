@@ -20,6 +20,7 @@
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SRT-4w-v9h">
                     <rect key="frame" x="20" y="64" width="374" height="32"/>
+                    <color key="backgroundColor" red="0.95408827070000002" green="0.68376034500000005" blue="0.0070041823199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31" id="v3I-U0-sAJ"/>
                     </constraints>
@@ -33,6 +34,7 @@
                         <segment title="7"/>
                         <segment title="8"/>
                     </segments>
+                    <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <action selector="seasonChanged:" destination="-1" eventType="valueChanged" id="nQt-YR-T2i"/>
                     </connections>

@@ -30,8 +30,6 @@ class CastDetailTableVC: UITableViewCell {
         self.birth.text = cast?.birth
         self.placeBirth.text = cast?.placeBirth
         self.episodes.text = "\(cast?.episodes ?? 0) episodes"
-        
-        
     }
     
     
