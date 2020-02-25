@@ -75,19 +75,11 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //2.- Acción de la tabla o boton.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let casts = self.cast[indexPath.row]
-        
-        if let splitViewController = self.splitViewController,
-            splitViewController.viewControllers.count > 1 {
-            if let navigationController = splitViewController.viewControllers[1] as? UINavigationController,
-                let detailViewController = navigationController.visibleViewController as? CastDetailViewController {
-                detailViewController.cast = casts
-            }
-        }else {
-            let castDetailViewController = CastDetailViewController.init(cast: casts)
-            self.navigationController?.pushViewController(castDetailViewController, animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        let casts = cast[indexPath.row]
+        let castDetailViewController = CastDetailViewController()
+        castDetailViewController.setCast(casts)
+        self.navigationController?.pushViewController(castDetailViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
     

@@ -16,11 +16,10 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     var cast: Cast? {
         didSet {
             self.title = self.cast?.fullname
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
         }
     }
         
-    
     convenience init(cast: Cast) {
         self.init(nibName: "CastDetailViewController", bundle: nil)
         self.title = cast.fullname
@@ -35,7 +34,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - SetUp
     
     func setupUI() {
-        self.title = cast?.fullname
+        self.title = "Cast Details"
         
         let nib = UINib.init(nibName: "CastDetailTableVC", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "CastDetailTableVC")
@@ -77,12 +76,14 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CastDetailTableVC", for: indexPath) as?
                 CastDetailTableVC {
-                cell.avatar.image = UIImage.init(named: self.cast?.avatar ?? "")
-                cell.fullName.text = cast?.fullname
-                cell.role.text = cast?.role
-                cell.birth.text = cast?.birth
-                cell.placeBirth.text = cast?.placeBirth
-                cell.episodes.text = "\(String(describing: cast?.episodes))"
+                cell.setCast(cast!)
+                
+//                cell.avatar.image = UIImage.init(named: self.cast?.avatar ?? "")
+//                cell.fullName.text = cast?.fullname
+//                cell.role.text = cast?.role
+//                cell.birth.text = cast?.birth
+//                cell.placeBirth.text = cast?.placeBirth
+//                cell.episodes.text = "\(String(describing: cast?.episodes))"
                 
                 
                 return cell

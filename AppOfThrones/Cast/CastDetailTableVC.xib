@@ -64,6 +64,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="o0w-gz-thk" firstAttribute="leading" secondItem="fGi-Sp-ETa" secondAttribute="leadingMargin" id="6Mw-cj-A49"/>
                     <constraint firstItem="8dn-ae-LB9" firstAttribute="leading" secondItem="fGi-Sp-ETa" secondAttribute="leadingMargin" id="Etk-lg-VSL"/>
