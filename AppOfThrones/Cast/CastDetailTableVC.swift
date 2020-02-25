@@ -22,14 +22,14 @@ class CastDetailTableVC: UITableViewCell {
         avatar.layer.cornerRadius = 5
     }
 
-    func setCast(_ cast: Cast) {
+    func setCast(_ cast: Cast?) {
         self.cast = cast
-        self.avatar.image = cast.avatar == nil ? nil : UIImage.init(named: cast.avatar!)
-        self.fullName.text = cast.fullname
-        self.role.text = cast.role
-        self.birth.text = cast.birth
-        self.placeBirth.text = cast.placeBirth
-        self.episodes.text = "\(cast.episodes ?? 0) episodes"
+        avatar.image = UIImage.init(named: self.cast?.avatar ?? "")
+        self.fullName.text = cast?.fullname
+        self.role.text = cast?.role
+        self.birth.text = cast?.birth
+        self.placeBirth.text = cast?.placeBirth
+        self.episodes.text = "\(cast?.episodes ?? 0) episodes"
         
         
     }

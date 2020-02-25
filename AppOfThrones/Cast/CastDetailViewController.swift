@@ -20,11 +20,11 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
         
-    convenience init(cast: Cast) {
-        self.init(nibName: "CastDetailViewController", bundle: nil)
-        self.title = cast.fullname
-        self.cast = cast
-    }
+//    convenience init(cast: Cast) {
+//        self.init(nibName: "CastDetailViewController", bundle: nil)
+//        self.title = cast.fullname
+//        self.cast = cast
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - SetUp
     
     func setupUI() {
-        self.title = "Cast Details"
+        self.title = cast?.fullname
         
         let nib = UINib.init(nibName: "CastDetailTableVC", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "CastDetailTableVC")
@@ -62,7 +62,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-    // MARK: -UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -76,15 +76,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CastDetailTableVC", for: indexPath) as?
                 CastDetailTableVC {
-                cell.setCast(cast!)
-                
-//                cell.avatar.image = UIImage.init(named: self.cast?.avatar ?? "")
-//                cell.fullName.text = cast?.fullname
-//                cell.role.text = cast?.role
-//                cell.birth.text = cast?.birth
-//                cell.placeBirth.text = cast?.placeBirth
-//                cell.episodes.text = "\(String(describing: cast?.episodes))"
-                
+                cell.setCast(cast)
                 
                 return cell
             }

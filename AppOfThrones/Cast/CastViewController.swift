@@ -30,9 +30,9 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
-        
-        let nibDetail = UINib.init(nibName: "CastDetailTableVC", bundle: nil)
-        tableView.register(nibDetail, forCellReuseIdentifier: "CastDetailTableVC")
+//        
+//        let nibDetail = UINib.init(nibName: "CastDetailTableVC", bundle: nil)
+//        tableView.register(nibDetail, forCellReuseIdentifier: "CastDetailTableVC")
         
         tableView.delegate = self
         tableView.dataSource = self
