@@ -27,6 +27,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     deinit {
         let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
         NotificationCenter.default.removeObserver(self, name: noteName, object: nil)
+        let noteNameRev = Notification.Name("DidReviewsUpdated")
+        NotificationCenter.default.removeObserver(self, name: noteNameRev, object: nil)
     }
     
     // MARK: - Setup
@@ -45,6 +47,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func setupNotifications() {
         let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+        let noteNameRev = Notification.Name(rawValue: "DidReviewsUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRateChange), name: noteNameRev, object: nil)
     }
     
     func setupData(_ seasonNumber :Int) {
@@ -82,7 +86,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.reloadData()
     }
     
-    func didRateChange() {
+    @objc func didRateChange() {
         self.tableView.reloadData()
     }
     

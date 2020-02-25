@@ -47,7 +47,9 @@
                             <constraint firstAttribute="height" constant="25" id="YTd-vp-aL2"/>
                         </constraints>
                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <state key="normal" title="RATE"/>
+                        <state key="normal" title="RATE">
+                            <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </state>
                         <connections>
                             <action selector="fireRate:" destination="aa8-EX-gY6" eventType="touchUpInside" id="9tI-kG-iVg"/>
                         </connections>

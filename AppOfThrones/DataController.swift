@@ -74,6 +74,10 @@ class DataController {
         }
         return filtered.first
     }
+    
+    func cleanReview() {
+        rating = []
+    }
         
 }
     
