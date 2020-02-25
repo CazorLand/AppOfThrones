@@ -100,6 +100,6 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.delegate = self
             return cell
         }
-        fatalError("Could not create the Episde cell")
+        fatalError("Could not create the Episode cell")
     }
 }

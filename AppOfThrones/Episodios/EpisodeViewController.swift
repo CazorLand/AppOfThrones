@@ -94,10 +94,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     //2.- Acción de la tabla o boton.
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let episode = episodes[indexPath.row]
         let episodeDetailViewController = EpisodeDetailViewController()
@@ -105,8 +101,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     self.navigationController?.pushViewController(episodeDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
+    
+//    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+//           return false
+//       }
     
     // MARK: - UITableViewDataSource
     

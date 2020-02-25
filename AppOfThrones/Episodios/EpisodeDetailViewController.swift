@@ -12,7 +12,7 @@ class EpisodeDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var episode: Episode?
+    private var episode: Episode? 
     
     override func viewDidLoad() {
         super.viewDidLoad()

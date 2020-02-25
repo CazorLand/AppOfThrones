@@ -14,7 +14,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     var cast: Cast? {
-        didSet {
+      didSet {
             self.title = self.cast?.fullname
 //            self.tableView.reloadData()
         }

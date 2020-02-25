@@ -18,19 +18,22 @@ class EpisodeDetailTableVC: UITableViewCell {
     
     var episodeDetail: Episode?
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         episodeImage.layer.cornerRadius = 5
         
     }
+    
    
     func setEpisode(_ episode: Episode?) {
         if let ep = episode {
-            self.episode.text = "[Episode \(ep.episode) - Season \(ep.season)]"
+            episodeImage.image = ep.image == nil ? nil : UIImage.init(named: ep.image!)
+            self.episode.text = "Episode \(ep.episode) - Season \(ep.season)"
             self.name.text = ep.name
             self.date.text = ep.date
             self.overView.text = ep.overview
-            episodeImage.image = UIImage.init(named: self.episodeDetail?.image ?? "")
+            
         }
     }
     
