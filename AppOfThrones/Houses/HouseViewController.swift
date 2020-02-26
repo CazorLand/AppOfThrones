@@ -70,7 +70,11 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //2.- Acción de la tabla o boton.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Se ha hecho tap en la celda con sección \(indexPath.section) y fila \(indexPath.row)")
+        let houseDet = house[indexPath.row]
+        let houseDetailViewController = HouseDetailViewController()
+        houseDetailViewController.setHouse(houseDet)
+        
+        self.navigationController?.pushViewController(houseDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

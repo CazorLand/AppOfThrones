@@ -57,6 +57,8 @@
 		D09C99952404255D0036AAEE /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09C99942404255D0036AAEE /* HouseDetailViewController.xib */; };
 		D09C99972405282F0036AAEE /* EpisodeDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C99962405282F0036AAEE /* EpisodeDetailTableVC.swift */; };
 		D09C9999240528530036AAEE /* EpisodeDetailTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09C9998240528530036AAEE /* EpisodeDetailTableVC.xib */; };
+		D09C999B240660930036AAEE /* HouseDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C999A240660930036AAEE /* HouseDetailTableVC.swift */; };
+		D09C999D240660A90036AAEE /* HouseDetailTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09C999C240660A90036AAEE /* HouseDetailTableVC.xib */; };
 		D0B19BBB23FC825B00C59FA2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B19BBA23FC825B00C59FA2 /* Rating.swift */; };
 		D0CA504E23FC1368005EA535 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA504D23FC1368005EA535 /* HouseTableViewCell.swift */; };
 		D0CA505023FC137C005EA535 /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CA504F23FC137C005EA535 /* HouseTableViewCell.xib */; };
@@ -127,6 +129,8 @@
 		D09C99942404255D0036AAEE /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 		D09C99962405282F0036AAEE /* EpisodeDetailTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailTableVC.swift; sourceTree = "<group>"; };
 		D09C9998240528530036AAEE /* EpisodeDetailTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailTableVC.xib; sourceTree = "<group>"; };
+		D09C999A240660930036AAEE /* HouseDetailTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailTableVC.swift; sourceTree = "<group>"; };
+		D09C999C240660A90036AAEE /* HouseDetailTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailTableVC.xib; sourceTree = "<group>"; };
 		D0B19BBA23FC825B00C59FA2 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		D0CA504D23FC1368005EA535 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
 		D0CA504F23FC137C005EA535 /* HouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				D0CA504F23FC137C005EA535 /* HouseTableViewCell.xib */,
 				D09C9992240425450036AAEE /* HouseDetailViewController.swift */,
 				D09C99942404255D0036AAEE /* HouseDetailViewController.xib */,
+				D09C999A240660930036AAEE /* HouseDetailTableVC.swift */,
+				D09C999C240660A90036AAEE /* HouseDetailTableVC.xib */,
 			);
 			path = Houses;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				D09C99952404255D0036AAEE /* HouseDetailViewController.xib in Resources */,
 				D09C997424000A0B0036AAEE /* season_5.json in Resources */,
 				D05F026723F35E9000D41629 /* RateViewController.xib in Resources */,
+				D09C999D240660A90036AAEE /* HouseDetailTableVC.xib in Resources */,
 				D03A44F223FB489400E820E3 /* CastTableViewCell.xib in Resources */,
 				D020BBE523F602BA0063843B /* SettingsViewController.xib in Resources */,
 				D09C997224000A0B0036AAEE /* season_3.json in Resources */,
@@ -414,6 +421,7 @@
 				D09C9983240142760036AAEE /* CastDetailTableVC.swift in Sources */,
 				D05F026523F35E4500D41629 /* RateViewController.swift in Sources */,
 				D09C99972405282F0036AAEE /* EpisodeDetailTableVC.swift in Sources */,
+				D09C999B240660930036AAEE /* HouseDetailTableVC.swift in Sources */,
 				D049A1DF23F34BC700D3BA81 /* AppDelegate.swift in Sources */,
 				D0B19BBB23FC825B00C59FA2 /* Rating.swift in Sources */,
 				D020BBE323F602AA0063843B /* SettingsViewController.swift in Sources */,

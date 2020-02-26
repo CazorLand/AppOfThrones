@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseDetailViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="ScV-jJ-b9e" id="qtq-sQ-q6y"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yYI-bY-Npu"/>
             </connections>
         </placeholder>
@@ -16,9 +17,22 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ScV-jJ-b9e">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ScV-jJ-b9e" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="2cs-le-asC"/>
+                <constraint firstItem="ScV-jJ-b9e" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ef9-zu-JzS"/>
+                <constraint firstItem="ScV-jJ-b9e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JLa-2c-gsD"/>
+                <constraint firstItem="ScV-jJ-b9e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KWK-az-UeV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </view>
     </objects>
 </document>
