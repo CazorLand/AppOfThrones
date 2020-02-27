@@ -17,16 +17,18 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setupUI()
-        self.title = "Cast"
-        self.setupNotifications()
         self.setupData()
+        self.setupNotifications()
     }
 
     
     // MARK: - Setup
     
     func setupUI() {
+        
+        self.title = "Cast"
         
         let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")

@@ -61,13 +61,14 @@ class EpisodeDetailViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        
             if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeDetailTableVC", for: indexPath) as? EpisodeDetailTableVC {
                 cell.setEpisode(episode)
                 
+                
                 return cell
             }
-        }
+        
         fatalError("Could not create cell episode")
     }
     

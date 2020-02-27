@@ -19,9 +19,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        self.setupNotifications()
         self.setupData(1)
-        
+        self.setupNotifications()
     }
     
     deinit {
@@ -106,10 +105,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.navigationController?.pushViewController(episodeDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-//    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-//           return false
-//       }
     
     // MARK: - UITableViewDataSource
     

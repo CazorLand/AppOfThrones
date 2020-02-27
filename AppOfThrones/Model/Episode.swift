@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Episode: Identifiable, Codable {
+class Episode: Identifiable, Codable, Equatable, CustomStringConvertible {
     
     var id: Int
     var name: String?
@@ -27,5 +27,22 @@ class Episode: Identifiable, Codable {
         self.season = season
         self.overview = overview
     }
+    
+//    MARK: - Equatable
+    
+    static func == (lhs: Episode, rhs:Episode) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+//    MARK: - CustomStringConvertible
+    
+    var description: String {
+        return "Season \(self.season) Ep.\(self.episode)"
+    }
+    
+    var descriptionOv: String {
+        return "Overview: \(self.overview)"
+    }
+    
     
 }

@@ -28,8 +28,8 @@ class CastDetailTableVC: UITableViewCell {
         self.fullName.text = cast?.fullname
         self.role.text = cast?.role
         self.birth.text = cast?.birth
-        self.placeBirth.text = cast?.placeBirth
-        self.episodes.text = "\(cast?.episodes ?? 0) episodes"
+        self.placeBirth.text = cast?.description1
+        self.episodes.text = cast?.description
     }
     
     

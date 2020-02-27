@@ -13,7 +13,29 @@ enum Rate {
     case rated(value: Double)
 }
 
-struct Rating {
+struct Rating: Equatable, CustomStringConvertible {
     var id: Int
     var rate: Rate
+    
+    
+    // MARK: - Equatable
+
+    static func == (lhs: Rating, rhs: Rating) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    // MARK: - CustomStringConvertible
+    
+    var description: String {
+        switch rate {
+        case .rated(let value):
+            return "Rated -> \(value)"
+        case.unrated:
+            return "Unrated"
+        }
+    }
+    
+    
 }
+
+

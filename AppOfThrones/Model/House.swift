@@ -8,19 +8,36 @@
 
 import Foundation
 
-struct House: Identifiable ,Codable {
+struct House: Identifiable ,Codable, Equatable, CustomStringConvertible {
+    
+    
     
     var imageName: String?
     var name: String?
     var words: String?
-    var seat: String? //Area donde se mueve esa casa. Mirar en la fan wiki
+    var seat: String?
     var id: Int
+
     
-    init(imageName: String?, name: String?, words: String?, seat: String?, id: Int) {
-           self.imageName = imageName
-           self.name  = name
-           self.words = words
-           self.seat  = seat
-           self.id = id
-       }
+//    MARK: - Equatable
+    
+    static func == (lhs: House, rhs: House) -> Bool {
+        return  lhs.id == rhs.id
+    }
+    
+//    MARK: - CustomStringConvertible
+    
+    var description: String {
+        if let name = self.name {
+            return "House \(name)"
+        }
+        return "House not available"
+    }
+    
+    var description1: String {
+        if let place = self.seat {
+            return "Seat -> \(place)"
+        }
+        return "No place"
+    }
 }

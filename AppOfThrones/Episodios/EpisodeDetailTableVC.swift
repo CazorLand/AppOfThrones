@@ -28,11 +28,11 @@ class EpisodeDetailTableVC: UITableViewCell {
    
     func setEpisode(_ episode: Episode?) {
         if let ep = episode {
-            episodeImage.image = ep.image == nil ? nil : UIImage.init(named: ep.image!)
-            self.episode.text = "Episode \(ep.episode) - Season \(ep.season)"
+            episodeImage.image = UIImage.init(named: episode?.image ?? "")
+            self.episode.text = ep.description
             self.name.text = ep.name
             self.date.text = ep.date
-            self.overView.text = ep.overview
+            self.overView.text = ep.descriptionOv
             
         }
     }

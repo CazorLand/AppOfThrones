@@ -23,10 +23,10 @@ class HouseDetailTableVC: UITableViewCell {
     
     func setHouse(_ house: House?) {
         self.house = house
-        imageHouse.image = UIImage.init(named: self.house?.imageName ?? "")
-        self.name.text = house?.name
+        imageHouse.image = UIImage.init(named: house?.imageName ?? "")
+        self.name.text = house?.description
         self.words.text = house?.words
-        self.seat.text = house?.seat
+        self.seat.text = house?.description1
     }
     
 }

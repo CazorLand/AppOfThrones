@@ -64,13 +64,13 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
           }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseDetailTableVC", for: indexPath) as? HouseDetailTableVC {
                 cell.setHouse(house)
                 
                 return cell
             }
-        }
+        
         fatalError("Could not create cell house")
     }
     

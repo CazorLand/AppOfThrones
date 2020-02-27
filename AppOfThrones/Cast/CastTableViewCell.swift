@@ -30,8 +30,8 @@ class CastTableViewCell: UITableViewCell {
         
         let heartImageNamed = DataController.shared.isFavorite(cast) ? "heart.fill" : "heart"
         let heartImage = UIImage.init(systemName: heartImageNamed)
-        self.heart.setImage(heartImage, for: .normal)
         
+        self.heart.setImage(heartImage, for: .normal)
         self.episodes.text = "\(cast.episodes ?? 0) episodes"
         self.role.text = cast.role
         self.name.text = cast.fullname

@@ -12,19 +12,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    var cast: Cast? {
-      didSet {
-            self.title = self.cast?.fullname
-//            self.tableView.reloadData()
-        }
-    }
-        
-//    convenience init(cast: Cast) {
-//        self.init(nibName: "CastDetailViewController", bundle: nil)
-//        self.title = cast.fullname
-//        self.cast = cast
-//    }
+    var cast: Cast?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +61,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CastDetailTableVC", for: indexPath) as?
                 CastDetailTableVC {
                 cell.setCast(cast)
@@ -81,7 +69,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 return cell
             }
             
-        }
+        
         fatalError("Could not create Account cells")
     }
 
