@@ -61,7 +61,7 @@ class EpisodeTableViewCell: UITableViewCell {
             }else {
                 DataController.shared.removeFavorite(episode)
             }
-            let noteName = Notification.Name(rawValue: "DidFavEpisodeChanged")
+            let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
             NotificationCenter.default.post(name: noteName, object: nil)
             delegate?.didFavoriteChanged()
         }
