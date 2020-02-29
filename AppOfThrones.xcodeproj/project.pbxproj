@@ -108,16 +108,16 @@
 		D049A1F723F34BD100D3BA81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05F026423F35E4500D41629 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		D05F026623F35E9000D41629 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
-		D09C996824000A0A0036AAEE /* season_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_3.json; path = Jsons/season_3.json; sourceTree = "<group>"; };
-		D09C996924000A0A0036AAEE /* season_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_1.json; path = Jsons/season_1.json; sourceTree = "<group>"; };
-		D09C996A24000A0A0036AAEE /* season_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_5.json; path = Jsons/season_5.json; sourceTree = "<group>"; };
-		D09C996B24000A0A0036AAEE /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = houses.json; path = Jsons/houses.json; sourceTree = "<group>"; };
-		D09C996C24000A0A0036AAEE /* cast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cast.json; path = Jsons/cast.json; sourceTree = "<group>"; };
-		D09C996D24000A0A0036AAEE /* season_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_8.json; path = Jsons/season_8.json; sourceTree = "<group>"; };
-		D09C996E24000A0A0036AAEE /* season_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_4.json; path = Jsons/season_4.json; sourceTree = "<group>"; };
-		D09C996F24000A0A0036AAEE /* season_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_6.json; path = Jsons/season_6.json; sourceTree = "<group>"; };
-		D09C997024000A0A0036AAEE /* season_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_7.json; path = Jsons/season_7.json; sourceTree = "<group>"; };
-		D09C997124000A0B0036AAEE /* season_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_2.json; path = Jsons/season_2.json; sourceTree = "<group>"; };
+		D09C996824000A0A0036AAEE /* season_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_3.json; path = ../Jsons/season_3.json; sourceTree = "<group>"; };
+		D09C996924000A0A0036AAEE /* season_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_1.json; path = ../Jsons/season_1.json; sourceTree = "<group>"; };
+		D09C996A24000A0A0036AAEE /* season_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_5.json; path = ../Jsons/season_5.json; sourceTree = "<group>"; };
+		D09C996B24000A0A0036AAEE /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = houses.json; path = ../Jsons/houses.json; sourceTree = "<group>"; };
+		D09C996C24000A0A0036AAEE /* cast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cast.json; path = ../Jsons/cast.json; sourceTree = "<group>"; };
+		D09C996D24000A0A0036AAEE /* season_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_8.json; path = ../Jsons/season_8.json; sourceTree = "<group>"; };
+		D09C996E24000A0A0036AAEE /* season_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_4.json; path = ../Jsons/season_4.json; sourceTree = "<group>"; };
+		D09C996F24000A0A0036AAEE /* season_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_6.json; path = ../Jsons/season_6.json; sourceTree = "<group>"; };
+		D09C997024000A0A0036AAEE /* season_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_7.json; path = ../Jsons/season_7.json; sourceTree = "<group>"; };
+		D09C997124000A0B0036AAEE /* season_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_2.json; path = ../Jsons/season_2.json; sourceTree = "<group>"; };
 		D09C997E240140270036AAEE /* CastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailViewController.swift; sourceTree = "<group>"; };
 		D09C99802401403C0036AAEE /* CastDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastDetailViewController.xib; sourceTree = "<group>"; };
 		D09C9982240142760036AAEE /* CastDetailTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailTableVC.swift; sourceTree = "<group>"; };
@@ -242,18 +242,9 @@
 				D03A44F823FB544900E820E3 /* Houses */,
 				D020BBDC23F601DD0063843B /* Cast */,
 				D09C99892403D61C0036AAEE /* Favorites */,
+				D0F95B37240AA8D2008A8BC9 /* JSON */,
 				D020BBDD23F601FF0063843B /* Settings */,
 				D049A1E723F34BD000D3BA81 /* Assets.xcassets */,
-				D09C996C24000A0A0036AAEE /* cast.json */,
-				D09C996B24000A0A0036AAEE /* houses.json */,
-				D09C996924000A0A0036AAEE /* season_1.json */,
-				D09C997124000A0B0036AAEE /* season_2.json */,
-				D09C996824000A0A0036AAEE /* season_3.json */,
-				D09C996E24000A0A0036AAEE /* season_4.json */,
-				D09C996A24000A0A0036AAEE /* season_5.json */,
-				D09C996F24000A0A0036AAEE /* season_6.json */,
-				D09C997024000A0A0036AAEE /* season_7.json */,
-				D09C996D24000A0A0036AAEE /* season_8.json */,
 				D049A1E923F34BD000D3BA81 /* LaunchScreen.storyboard */,
 				D049A1EC23F34BD000D3BA81 /* Info.plist */,
 			);
@@ -295,6 +286,23 @@
 				D09C99A22409AAE70036AAEE /* EpisodeFavTableVC.xib */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		D0F95B37240AA8D2008A8BC9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D09C996C24000A0A0036AAEE /* cast.json */,
+				D09C996B24000A0A0036AAEE /* houses.json */,
+				D09C996924000A0A0036AAEE /* season_1.json */,
+				D09C997124000A0B0036AAEE /* season_2.json */,
+				D09C996824000A0A0036AAEE /* season_3.json */,
+				D09C996E24000A0A0036AAEE /* season_4.json */,
+				D09C996A24000A0A0036AAEE /* season_5.json */,
+				D09C996F24000A0A0036AAEE /* season_6.json */,
+				D09C997024000A0A0036AAEE /* season_7.json */,
+				D09C996D24000A0A0036AAEE /* season_8.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
