@@ -17,35 +17,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let episodeViewController = EpisodeViewController.init(nibName: "EpisodeViewController", bundle: nil)
-        let castViewController = CastViewController.init(nibName: "CastViewController", bundle: nil)
-        let houseViewController = HouseViewController.init(nibName: "HouseViewController", bundle: nil)
-        let settingsViewController = SettingsViewController.init(nibName: "SettingsViewController", bundle: nil)
-        let favoritesViewController = FavoritesViewController.init(nibName: "FavoritesViewController", bundle: nil)
+        let episodeViewController = EpisodeViewController()
+        let castViewController = CastViewController()
+        let houseViewController = HouseViewController()
+        let favoritesViewController = FavoritesViewController()
+        let settingsViewController = SettingsViewController()
         
-        let episodeSplitViewController = CustomSplitViewController()
-        let castSplitViewController = CustomSplitViewController()
-        let houseSplitViewController = CustomSplitViewController()
-        let favoritesSplitViewController = CustomSplitViewController()
-        let settingsSplitViewController = CustomSplitViewController()
+        episodeViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
+        castViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
+        houseViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
+        favoritesViewController.tabBarItem = UITabBarItem.init(title: "Favorites", image: UIImage.init(systemName: "heart.fill"), tag: 3)
+        settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 4)
         
-        episodeSplitViewController.viewControllers = [UINavigationController.init(rootViewController: episodeViewController)]
-        castSplitViewController.viewControllers = [UINavigationController.init(rootViewController: castViewController)]
-        houseSplitViewController.viewControllers = [UINavigationController.init(rootViewController: houseViewController)]
-        favoritesSplitViewController.viewControllers = [UINavigationController.init(rootViewController: favoritesViewController)]
-        settingsSplitViewController.viewControllers = [UINavigationController.init(rootViewController: settingsViewController)]
-        
-        
-        episodeSplitViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
-        castSplitViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
-        
-        settingsSplitViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 2)
-        favoritesSplitViewController.tabBarItem = UITabBarItem.init(title: "Favorites", image: UIImage.init(systemName: "heart.fill"), tag: 3)
-        houseSplitViewController.tabBarItem = UITabBarItem.init(title: "House", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 4)
-        
+        let navigationEpisodeViewController = UINavigationController.init(rootViewController: episodeViewController)
+        let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
+        let navigationHouseController = UINavigationController.init(rootViewController: houseViewController)
+        let navigationFavoritesController = UINavigationController.init(rootViewController: favoritesViewController)
+        let navigationSettingsController = UINavigationController.init(rootViewController: settingsViewController)
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [episodeSplitViewController, castSplitViewController, houseSplitViewController, favoritesSplitViewController, settingsSplitViewController]
+        tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseController, navigationFavoritesController, navigationSettingsController]
         
         tabBarController.tabBar.barStyle = .black
         tabBarController.tabBar.isTranslucent = true
