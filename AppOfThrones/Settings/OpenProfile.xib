@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZc-64-KIs">
-                    <rect key="frame" x="83" y="84" width="311" height="34"/>
+                    <rect key="frame" x="78" y="93" width="311" height="34"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="311" id="FGE-oO-ScY"/>
@@ -29,22 +29,22 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1oW-tH-KHy">
-                    <rect key="frame" x="20" y="75.5" width="53" height="44"/>
+                    <rect key="frame" x="20" y="75.5" width="50" height="50"/>
                     <color key="tintColor" red="1" green="0.74929949439999999" blue="0.091897874500000004" alpha="0.97400418129999999" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47" id="db8-IK-QLE"/>
+                        <constraint firstAttribute="height" constant="53" id="db8-IK-QLE"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EJf-M5-xiv">
-                    <rect key="frame" x="20" y="162" width="53" height="47"/>
+                    <rect key="frame" x="20" y="162" width="50" height="50"/>
                     <color key="tintColor" red="1" green="0.74929949439999999" blue="0.091897874500000004" alpha="0.97400418129999999" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="53" id="dx4-Nw-6ow"/>
-                        <constraint firstAttribute="height" constant="50.5" id="mNa-fb-DIu"/>
+                        <constraint firstAttribute="width" constant="50" id="dx4-Nw-6ow"/>
+                        <constraint firstAttribute="height" constant="53.5" id="mNa-fb-DIu"/>
                     </constraints>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgC-eF-2ci">
-                    <rect key="frame" x="83" y="167" width="311" height="34"/>
+                    <rect key="frame" x="78" y="180" width="311" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="Jiy-Do-FvX"/>
                     </constraints>
@@ -55,16 +55,16 @@
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KgC-eF-2ci" secondAttribute="trailing" constant="20" id="84u-iR-p5i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KgC-eF-2ci" secondAttribute="trailing" constant="25" id="84u-iR-p5i"/>
                 <constraint firstItem="1oW-tH-KHy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="CQ9-up-axr"/>
-                <constraint firstItem="EJf-M5-xiv" firstAttribute="top" secondItem="1oW-tH-KHy" secondAttribute="bottom" constant="39.5" id="Ec1-5T-gys"/>
+                <constraint firstItem="EJf-M5-xiv" firstAttribute="top" secondItem="1oW-tH-KHy" secondAttribute="bottom" constant="33.5" id="Ec1-5T-gys"/>
                 <constraint firstItem="EJf-M5-xiv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TJw-Vg-lyO"/>
-                <constraint firstItem="tZc-64-KIs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="XtV-bN-ako"/>
+                <constraint firstItem="tZc-64-KIs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="49" id="XtV-bN-ako"/>
                 <constraint firstItem="1oW-tH-KHy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="cQn-0w-DzL"/>
-                <constraint firstItem="tZc-64-KIs" firstAttribute="leading" secondItem="1oW-tH-KHy" secondAttribute="trailing" constant="10" id="h0Q-gj-fIc"/>
-                <constraint firstItem="KgC-eF-2ci" firstAttribute="leading" secondItem="EJf-M5-xiv" secondAttribute="trailing" constant="10" id="hMx-oM-PJk"/>
-                <constraint firstItem="KgC-eF-2ci" firstAttribute="top" secondItem="tZc-64-KIs" secondAttribute="bottom" constant="49" id="pzW-OA-OVo"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tZc-64-KIs" secondAttribute="trailing" constant="20" id="vZH-iY-ICe"/>
+                <constraint firstItem="tZc-64-KIs" firstAttribute="leading" secondItem="1oW-tH-KHy" secondAttribute="trailing" constant="8" id="h0Q-gj-fIc"/>
+                <constraint firstItem="KgC-eF-2ci" firstAttribute="leading" secondItem="EJf-M5-xiv" secondAttribute="trailing" constant="8" id="hMx-oM-PJk"/>
+                <constraint firstItem="KgC-eF-2ci" firstAttribute="top" secondItem="tZc-64-KIs" secondAttribute="bottom" constant="53" id="pzW-OA-OVo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tZc-64-KIs" secondAttribute="trailing" constant="25" id="vZH-iY-ICe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>

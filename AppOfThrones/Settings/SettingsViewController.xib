@@ -20,23 +20,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uWA-eX-Epv">
-                    <rect key="frame" x="20" y="80.5" width="62" height="58"/>
+                    <rect key="frame" x="20" y="80.5" width="50" height="50"/>
                     <color key="tintColor" red="1" green="0.74929949439999999" blue="0.091897874500000004" alpha="0.97400418129999999" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60.5" id="UW5-I8-LPe"/>
-                        <constraint firstAttribute="width" constant="62" id="oBI-47-2Sv"/>
+                        <constraint firstAttribute="height" constant="52.5" id="UW5-I8-LPe"/>
+                        <constraint firstAttribute="width" constant="50" id="oBI-47-2Sv"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u5I-CM-tUr">
-                    <rect key="frame" x="20" y="787" width="62" height="49"/>
+                    <rect key="frame" x="20" y="787" width="50" height="50"/>
                     <color key="tintColor" red="1" green="0.74929949439999999" blue="0.091897874500000004" alpha="0.97400418129999999" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="51" id="QYE-Ys-yi0"/>
-                        <constraint firstAttribute="width" constant="62" id="YKi-s8-b2c"/>
+                        <constraint firstAttribute="height" constant="52" id="QYE-Ys-yi0"/>
+                        <constraint firstAttribute="width" constant="50" id="YKi-s8-b2c"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-tI-aWO">
-                    <rect key="frame" x="90" y="100" width="63" height="40"/>
+                    <rect key="frame" x="78" y="89" width="63" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="63" id="6Sm-iH-64y"/>
                         <constraint firstAttribute="height" constant="40" id="TFY-qv-kYi"/>
@@ -49,8 +49,36 @@
                         <action selector="openProfile:" destination="-1" eventType="touchUpInside" id="2c5-mL-0P9"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-Nk-3pS">
+                    <rect key="frame" x="20" y="270" width="374" height="65"/>
+                    <color key="backgroundColor" red="0.95408827070000002" green="0.68376034500000005" blue="0.0070041823199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="9u2-iK-b3I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Clean Favorites">
+                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cleanFavoritesAction:" destination="-1" eventType="touchUpInside" id="CMr-90-cQa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-Bg-CrV">
+                    <rect key="frame" x="20" y="350" width="374" height="65"/>
+                    <color key="backgroundColor" red="0.95408827070000002" green="0.68376034500000005" blue="0.0070041823199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="nsK-RH-VVx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Clean Reviews">
+                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cleanReviewsAction:" destination="-1" eventType="touchUpInside" id="TyG-cg-l7O"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNf-p5-67x">
-                    <rect key="frame" x="90" y="805" width="47" height="40"/>
+                    <rect key="frame" x="78" y="798" width="47" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="mcJ-Ca-287"/>
                         <constraint firstAttribute="width" constant="47" id="zLa-5M-7Gm"/>
@@ -63,39 +91,21 @@
                         <action selector="openHelp:" destination="-1" eventType="touchUpInside" id="kqj-h3-OeB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-Nk-3pS">
-                    <rect key="frame" x="20" y="359" width="374" height="65"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.95408827070000002" green="0.68376034500000005" blue="0.0070041823199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Clean Favorites">
-                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                    </state>
-                    <connections>
-                        <action selector="cleanFavoritesAction:" destination="-1" eventType="touchUpInside" id="CMr-90-cQa"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-Bg-CrV">
-                    <rect key="frame" x="20" y="443" width="374" height="65"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.95408827070000002" green="0.68376034500000005" blue="0.0070041823199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Clean Reviews">
-                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                    </state>
-                    <connections>
-                        <action selector="cleanReviewsAction:" destination="-1" eventType="touchUpInside" id="TyG-cg-l7O"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cX1-tI-aWO" firstAttribute="leading" secondItem="uWA-eX-Epv" secondAttribute="trailing" constant="8" id="LN6-cc-x4G"/>
-                <constraint firstItem="cX1-tI-aWO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="56" id="O4j-gY-SjI"/>
+                <constraint firstItem="cX1-tI-aWO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="45" id="O4j-gY-SjI"/>
                 <constraint firstItem="gNf-p5-67x" firstAttribute="leading" secondItem="u5I-CM-tUr" secondAttribute="trailing" constant="8" id="U4s-cJ-7xA"/>
+                <constraint firstItem="4ux-Bg-CrV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VOF-mq-fGT"/>
+                <constraint firstItem="0bH-Nk-3pS" firstAttribute="top" secondItem="cX1-tI-aWO" secondAttribute="bottom" constant="141" id="WLw-Io-4Jc"/>
                 <constraint firstItem="uWA-eX-Epv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="35" id="aIu-C7-X5m"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="u5I-CM-tUr" secondAttribute="bottom" constant="25" id="hPJ-xV-s7k"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gNf-p5-67x" secondAttribute="bottom" constant="17" id="vuT-Fv-cwP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4ux-Bg-CrV" secondAttribute="trailing" constant="20" id="cCt-9M-4iq"/>
+                <constraint firstItem="4ux-Bg-CrV" firstAttribute="top" secondItem="0bH-Nk-3pS" secondAttribute="bottom" constant="15" id="cLb-sL-y4t"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="u5I-CM-tUr" secondAttribute="bottom" constant="24" id="hPJ-xV-s7k"/>
+                <constraint firstItem="0bH-Nk-3pS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hhg-EW-j7L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0bH-Nk-3pS" secondAttribute="trailing" constant="20" id="lqm-9N-tXH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gNf-p5-67x" secondAttribute="bottom" constant="24" id="vuT-Fv-cwP"/>
                 <constraint firstItem="uWA-eX-Epv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="xQv-RL-z3Y"/>
                 <constraint firstItem="u5I-CM-tUr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="xy7-tO-xkt"/>
             </constraints>

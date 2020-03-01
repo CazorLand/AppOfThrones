@@ -23,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igf-zC-PLC">
-                        <rect key="frame" x="168" y="20" width="226" height="21"/>
+                        <rect key="frame" x="168" y="20" width="184" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="o6n-oh-phm"/>
                         </constraints>
@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJM-CM-ASc">
-                        <rect key="frame" x="168" y="49" width="226" height="21"/>
+                        <rect key="frame" x="168" y="49" width="184" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="8bt-vH-ZzA"/>
                         </constraints>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-k6-b1S">
-                        <rect key="frame" x="168" y="82" width="226" height="21"/>
+                        <rect key="frame" x="168" y="82" width="184" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="AeR-Sh-lA3"/>
                         </constraints>
@@ -63,14 +63,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="O6h-k6-b1S" firstAttribute="leading" secondItem="nRu-aN-P8V" secondAttribute="trailing" constant="8" id="B73-Ut-TYU"/>
-                    <constraint firstItem="O6h-k6-b1S" firstAttribute="trailing" secondItem="MFD-pW-KZD" secondAttribute="trailingMargin" id="Drw-9d-Dvy"/>
-                    <constraint firstAttribute="trailing" secondItem="yJM-CM-ASc" secondAttribute="trailing" constant="20" id="Lbp-Bj-h5n"/>
+                    <constraint firstItem="O6h-k6-b1S" firstAttribute="trailing" secondItem="MFD-pW-KZD" secondAttribute="trailingMargin" constant="-42" id="Drw-9d-Dvy"/>
+                    <constraint firstAttribute="trailing" secondItem="yJM-CM-ASc" secondAttribute="trailing" constant="62" id="Lbp-Bj-h5n"/>
                     <constraint firstItem="yJM-CM-ASc" firstAttribute="top" secondItem="igf-zC-PLC" secondAttribute="bottom" constant="8" id="NHT-EV-huL"/>
                     <constraint firstAttribute="bottom" secondItem="1JL-gp-dB7" secondAttribute="bottom" id="YlY-bT-pAC"/>
                     <constraint firstItem="nRu-aN-P8V" firstAttribute="centerY" secondItem="MFD-pW-KZD" secondAttribute="centerY" id="ZKe-Cj-Fir"/>
                     <constraint firstItem="1JL-gp-dB7" firstAttribute="top" secondItem="MFD-pW-KZD" secondAttribute="top" id="ZnW-rb-qj2"/>
                     <constraint firstAttribute="trailing" secondItem="1JL-gp-dB7" secondAttribute="trailing" id="bxm-wJ-o4c"/>
-                    <constraint firstAttribute="trailing" secondItem="igf-zC-PLC" secondAttribute="trailing" constant="20" id="dv9-zH-irR"/>
+                    <constraint firstAttribute="trailing" secondItem="igf-zC-PLC" secondAttribute="trailing" constant="62" id="dv9-zH-irR"/>
                     <constraint firstItem="igf-zC-PLC" firstAttribute="leading" secondItem="nRu-aN-P8V" secondAttribute="trailing" constant="8" id="glV-6z-Y8p"/>
                     <constraint firstItem="O6h-k6-b1S" firstAttribute="top" secondItem="yJM-CM-ASc" secondAttribute="bottom" constant="12" id="hlb-3H-FEx"/>
                     <constraint firstItem="yJM-CM-ASc" firstAttribute="leading" secondItem="nRu-aN-P8V" secondAttribute="trailing" constant="8" id="iC1-C0-A8d"/>
